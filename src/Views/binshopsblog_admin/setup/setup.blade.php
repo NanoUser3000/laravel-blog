@@ -43,7 +43,11 @@
                                 <div class="tab-pane" id="language">
                                     <div class="row">
                                         <div class="col-sm-12">
-                                            <h4 class="info-text">Your default language will be set to English. You can add more language through the admin panel.</h4>
+                                            <h4 class="info-text">
+                                                Your default language will be set to Polish.
+                                                Unfortunately the support for many languages is very limited.
+                                                {{-- You can add more language through the admin panel. --}}
+                                            </h4>
 
                                             <h6 class="info-text">
                                                 Version v9.3.x
@@ -55,7 +59,7 @@
                                                id="language_name"
                                                required
                                                name='name'
-                                               value="English"
+                                               value="Polish"
                                                style="display: none">
 
                                         <input type="text"
@@ -63,18 +67,13 @@
                                                id="language_locale"
                                                required
                                                name='locale'
-                                               value="en"
+                                               value="pl"
                                                style="display: none">
 
-                                        <input name="iso_code" value="en" id="iso_code" style="display: none">
+                                        <input name="iso_code" value="pl" id="iso_code" style="display: none">
+                                        {{-- TODO NANOUSERTODO: dd/mm/yyyy + test ordering after --}}
                                         <input name="date_format" value="YYYY/MM/DD" style="display: none">
                                         <input checked style="display: none" name="active" value="1">
-
-
-                                        {{--                                            </div>--}}
-                                        {{--                                        </div>--}}
-
-
 
                                     </div>
                                 </div>
