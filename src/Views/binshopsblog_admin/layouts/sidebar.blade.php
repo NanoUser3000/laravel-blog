@@ -26,7 +26,8 @@
         </div>
     </li>
 
-
+    {{-- comments disabled for now --}}
+    {{--
     <li class="list-group-item list-group-color justify-content-between lh-condensed">
         <div>
             <h6 class="my-0"><a href="{{ route('binshopsblog.admin.comments.index') }}">Comments</a>
@@ -58,7 +59,7 @@
             </div>
         </div>
     </li>
-
+    --}}
 
     <li class="list-group-item list-group-color  justify-content-between lh-condensed">
         <div>
@@ -87,6 +88,8 @@
     </li>
 
 
+    {{-- languages hidden for now --}}
+    {{--
     <li class="list-group-item list-group-color  justify-content-between lh-condensed">
         <div>
             <h6 class="my-0"><a href="{{ route('binshopsblog.admin.images.upload') }}">Languages</a></h6>
@@ -105,6 +108,7 @@
             </div>
         </div>
     </li>
+    --}}
 
 
     @if(config("binshopsblog.image_upload_enabled"))
