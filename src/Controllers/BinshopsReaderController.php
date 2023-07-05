@@ -148,10 +148,12 @@ class BinshopsReaderController extends Controller
         $blogPostSlug = $request->route('blogPostSlug');
 
         // the published_at + is_published are handled by BinshopsBlogPublishedScope, and don't take effect if the logged in user can manage log posts
-        $blog_post = BinshopsPostTranslation::where([
+        $blog_post = BinshopsPostTranslation::has('post') // don't get exisiting translation with ->post nulled by published scope
+        ->where([
             ["slug", "=", $blogPostSlug],
             ['lang_id', "=" , $request->get("lang_id")]
         ])->firstOrFail();
+        assert($blog_post->post != null);
 
         if ($captcha = $this->getCaptchaObject()) {
             $captcha->runCaptchaBeforeShowingPosts($request, $blog_post);
